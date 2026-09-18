@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,93 +12,242 @@
         :root{--ink:#17212b;--muted:#66717d;--cream:#f6f4ef;--lime:#c7f36b;--coral:#ff785f;--line:#dfe1dc}
         *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
         h1,h2,h3,p{margin:0}h1,h2,h3,nav,.logo{font-family:'Space Grotesk',sans-serif}a{text-decoration:none;color:inherit}.wrap{max-width:1160px;margin:auto;padding:0 28px}
-        nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:2}.logo{font-weight:700;font-size:1.2rem}.logo span{color:var(--coral)}.links{display:flex;gap:29px;font-size:.88rem}.links a{position:relative}.links a:after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:var(--coral);transition:.3s}.links a:hover:after{width:100%}.menu{display:none;border:0;background:none;font-size:1.5rem;cursor:pointer;color:var(--ink)}
-        .hero{min-height:650px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px}.eyebrow{color:var(--coral);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.74rem;margin-bottom:19px}.hero h1{font-size:clamp(3.7rem,8vw,7rem);line-height:.94;letter-spacing:-5px;max-width:700px}.hero h1 em{font-style:normal;color:var(--coral)}.hero p{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:520px;margin:28px 0}.button{display:inline-block;padding:15px 22px;border-radius:30px;background:var(--ink);color:white;font-weight:700;transition:.25s}.button:hover{transform:translateY(-4px);box-shadow:0 10px 20px #17212b22}.button.alt{background:var(--lime);color:var(--ink);margin-left:8px}.portrait{position:relative;width:min(100%,390px);aspect-ratio:4/5;margin:auto;animation:float 5s ease-in-out infinite}.portrait img{width:100%;height:100%;object-fit:cover;border-radius:48% 48% 12% 12%;filter:grayscale(100%);position:relative;z-index:1}.blob{position:absolute;inset:8% -10% -7% 10%;background:var(--lime);border-radius:55% 45% 40% 60%;transform:rotate(-11deg)}.sticker{position:absolute;z-index:2;right:-35px;top:22%;background:var(--coral);padding:17px;border-radius:50%;font-size:.75rem;font-weight:bold;transform:rotate(12deg)}
+        nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:2;gap:14px}.logo{font-weight:700;font-size:1.2rem;white-space:nowrap}.logo span{color:var(--coral)}.links{display:flex;gap:29px;font-size:.88rem;margin-inline-start:auto;margin-inline-end:14px}.links a{position:relative}.links a:after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:var(--coral);transition:.3s}.links a:hover:after{width:100%}.menu{display:none;border:0;background:none;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+        #lang-toggle{background:var(--ink);color:#fff;border:2px solid var(--ink);padding:8px 16px;border-radius:30px;font:700 .8rem 'Space Grotesk',sans-serif;cursor:pointer;transition:.25s;white-space:nowrap}
+        #lang-toggle:hover{background:var(--lime);color:var(--ink);border-color:var(--lime);transform:translateY(-2px)}
+        .hero{min-height:650px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px}.eyebrow{color:var(--coral);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.74rem;margin-bottom:19px}.hero h1{font-size:clamp(3.7rem,8vw,7rem);line-height:.94;letter-spacing:-5px;max-width:700px}.hero h1 em{font-style:normal;color:var(--coral)}.hero p{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:520px;margin:28px 0}.button{display:inline-block;padding:15px 22px;border-radius:30px;background:var(--ink);color:white;font-weight:700;transition:.25s}.button:hover{transform:translateY(-4px);box-shadow:0 10px 20px #17212b22}.button.alt{background:var(--lime);color:var(--ink);margin-inline-start:8px}.portrait{position:relative;width:min(100%,390px);aspect-ratio:4/5;margin:auto;animation:float 5s ease-in-out infinite}.portrait img{width:100%;height:100%;object-fit:cover;border-radius:48% 48% 12% 12%;filter:grayscale(100%);position:relative;z-index:1}.blob{position:absolute;inset:8% -10% -7% 10%;background:var(--lime);border-radius:55% 45% 40% 60%;transform:rotate(-11deg)}.sticker{position:absolute;z-index:2;right:-35px;top:22%;background:var(--coral);padding:17px;border-radius:50%;font-size:.75rem;font-weight:bold;transform:rotate(12deg)}
         section{padding:105px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.section-head h2{font-size:clamp(2.3rem,5vw,4rem);letter-spacing:-2px}.section-head p{color:var(--muted);max-width:350px;line-height:1.6}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px}.about-copy{font-size:1.35rem;line-height:1.5}.facts{display:flex;gap:35px;margin-top:35px}.fact strong{font:700 2.2rem 'Space Grotesk';display:block}.fact small{color:var(--muted)}
         .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}.gallery img{width:100%;height:190px;object-fit:cover;border-radius:12px;transition:.4s}.gallery img:hover{transform:scale(1.04) rotate(1deg);filter:saturate(1.5)}
         .filters{display:flex;gap:8px;margin:-17px 0 28px}.filter{border:1px solid var(--line);border-radius:30px;background:transparent;color:var(--muted);padding:9px 15px;font:500 .8rem 'DM Sans';cursor:pointer;transition:.25s}.filter:hover,.filter.active{background:var(--ink);border-color:var(--ink);color:#fff}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border-radius:16px;overflow:hidden;transition:.35s;position:relative}.card:hover{transform:translateY(-9px);box-shadow:0 18px 35px #17212b16}.card.hide{display:none}.card img{width:100%;height:205px;object-fit:cover}.status{position:absolute;top:16px;right:-34px;z-index:1;background:var(--lime);color:var(--ink);padding:8px 38px;font:700 .65rem 'Space Grotesk';letter-spacing:1px;text-transform:uppercase;transform:rotate(8deg);box-shadow:4px 5px 0 #17212b18}.card-body{padding:23px}.tag{color:var(--coral);font-size:.72rem;font-weight:bold;text-transform:uppercase;letter-spacing:1px}.card h3{font-size:1.35rem;margin:10px 0}.card p{color:var(--muted);line-height:1.55;font-size:.92rem}.card a{display:inline-block;margin-top:18px;font-weight:bold;border-bottom:2px solid var(--lime)}
         .blog{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.post{padding:25px 0;border-top:3px solid var(--ink);cursor:pointer}.post time{color:var(--coral);font-size:.8rem}.post h3{font-size:1.45rem;line-height:1.2;margin:13px 0}.post p{color:var(--muted);line-height:1.6}.post .more{max-height:0;overflow:hidden;opacity:0;transition:.35s}.post.open .more{max-height:80px;opacity:1;margin-top:14px}.post.open{border-color:var(--coral)}
         .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.contact h2{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;letter-spacing:-3px}.contact p{color:var(--muted);line-height:1.6;margin-top:20px}form{display:grid;gap:16px}.autosave-status{font-size:.78rem;color:var(--muted);min-height:18px;margin-top:-2px}.autosave-status.saved{color:#1d7a52}input,textarea{font:inherit;border:0;border-bottom:1px solid #aeb4b0;background:transparent;padding:15px 2px;outline:0;color:var(--ink)}input:focus,textarea:focus{border-color:var(--coral)}textarea{min-height:110px;resize:vertical}form button{border:0;cursor:pointer;width:max-content;font:700 1rem 'DM Sans'}footer{padding:25px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
-
-        /* Custom File Upload Styling */
         .file-upload-wrapper { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
         .file-upload-btn { display: inline-flex; align-items: center; gap: 8px; border: 1.5px dashed var(--ink); padding: 10px 18px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; cursor: pointer; color: var(--ink); background: transparent; transition: 0.25s; }
         .file-upload-btn:hover { background: var(--lime); border-style: solid; transform: translateY(-2px); }
         .file-upload-btn svg { width: 16px; height: 16px; fill: currentColor; }
         .file-name-display { font-size: 0.8rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
         input[type="file"] { display: none; }
-
         @keyframes float{50%{transform:translateY(-14px)}}@keyframes pulse{50%{box-shadow:0 0 0 10px #ff785f18}}.reveal{opacity:0;transform:translateY(22px);transition:.8s}.reveal.show{opacity:1;transform:none}.sticker{animation:pulse 2.8s ease-in-out infinite}.button{position:relative;overflow:hidden}.button:after{content:'';position:absolute;inset:0;background:#fff2;transform:translateX(-110%) skewX(-18deg);transition:.5s}.button:hover:after{transform:translateX(110%) skewX(-18deg)}
-        @media(max-width:760px){.links{display:flex;position:absolute;top:82px;left:0;right:0;padding:20px 28px;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;gap:18px;transform:translateY(-16px);opacity:0;pointer-events:none;transition:.3s}.links.open{transform:none;opacity:1;pointer-events:auto}.menu{display:block}.hero{grid-template-columns:1fr;min-height:auto;padding:85px 0}.hero h1{letter-spacing:-3px}.portrait{width:75%;margin-top:25px}.about-grid,.contact{grid-template-columns:1fr;gap:40px}.projects,.blog{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:15px}.contact{gap:35px}.filters{overflow:auto;padding-bottom:3px;margin-top:-3px}}
+        @media(max-width:760px){nav{gap:8px}.links{display:flex;position:absolute;top:82px;left:0;right:0;padding:20px 28px;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;gap:18px;transform:translateY(-16px);opacity:0;pointer-events:none;transition:.3s;margin:0}.links.open{transform:none;opacity:1;pointer-events:auto}.menu{display:block}.hero{grid-template-columns:1fr;min-height:auto;padding:85px 0}.hero h1{letter-spacing:-3px}.portrait{width:75%;margin-top:25px}.about-grid,.contact{grid-template-columns:1fr;gap:40px}.projects,.blog{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:15px}.contact{gap:35px}.filters{overflow:auto;padding-bottom:3px;margin-top:-3px}#lang-toggle{padding:7px 13px;font-size:.75rem}}
     </style>
 </head>
 <body>
     <div class="wrap">
-        <nav><a class="logo" href="#top">ammar<span>.</span>mansour</a><div class="links"><a href="#about">About</a><a href="#work">Portfolio</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div><button class="menu" aria-label="Open menu" aria-expanded="false">☰</button></nav>
+        <nav>
+            <a class="logo" href="#top">ammar<span>.</span>mansour</a>
+            <div class="links">
+                <a href="#about" data-en="About" data-ar="نبذة">About</a>
+                <a href="#work" data-en="Portfolio" data-ar="الأعمال">Portfolio</a>
+                <a href="#blog" data-en="Blog" data-ar="المدونة">Blog</a>
+                <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+            </div>
+            <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+            <button id="lang-toggle" data-en="العربية" data-ar="English">العربية</button>
+        </nav>
         <main id="top">
-            <section class="hero"><div class="reveal"><div class="eyebrow">Cybersecurity Student · Developer · Creative</div><h1>Making ideas feel <em>alive.</em></h1><p>I’m Ammar, a cybersecurity student who enjoys programming, editing photos and videos, and creating modern websites.</p><a class="button" href="#work">See my work ↓</a><a class="button alt" href="#contact">Let's talk</a></div><div class="portrait reveal"><div class="blob"></div><img src="https://i.pinimg.com/736x/6e/84/ce/6e84cee2bb28aea72348e759b7d234a7.jpg" alt="Ammar Mansour portrait"><div class="sticker">AVAILABLE<br>FOR GOOD<br>PROJECTS ✦</div></div></section>
-            <section id="about"><div class="section-head reveal"><h2>A little<br>about me.</h2><p>I’m building my skills across cybersecurity, programming, digital editing, and web development.</p></div><div class="about-grid"><div class="about-copy reveal">I’m a cybersecurity student with a passion for technology and creative digital work. I enjoy programming, editing photos and videos, and creating responsive websites that are useful, clear, and visually engaging.<div class="facts"><div class="fact"><strong>01</strong><small>cybersecurity student</small></div><div class="fact"><strong>04</strong><small>creative skills</small></div><div class="fact"><strong>∞</strong><small>ideas to build</small></div></div></div><div class="gallery reveal"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80" alt="Creative studio"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Notebook and coffee"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Laptop workspace"><img src="https://mittrarabia.majarracdn.cloud/mit/2025/10/shutterstock_1122339353-Converted-1920x1126.jpeg" alt="Portrait outdoors"></div></div></section>
-            <section id="work"><div class="section-head reveal"><h2>Selected<br>work.</h2><p>A few projects I’m proud to have shaped from first sketch to final pixel.</p></div><div class="filters reveal"><button class="filter active" data-filter="all">All work</button><button class="filter" data-filter="branding">Branding</button><button class="filter" data-filter="digital">Digital</button><button class="filter" data-filter="campaign">Campaign</button></div><div class="projects"><article class="card reveal" data-type="branding"><span class="status">In the making · Coming soon</span><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=80" alt="Brand identity project"><div class="card-body"><span class="tag">Branding · 2024</span><h3>Ora skincare</h3><p>A warm, tactile identity for a new kind of everyday ritual.</p><a href="#contact">View project ↗</a></div></article><article class="card reveal" data-type="digital"><span class="status">In the making · Coming soon</span><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=700&q=80" alt="Website project"><div class="card-body"><span class="tag">Digital · 2023</span><h3>Common ground</h3><p>Making local food discovery feel more human and more fun.</p><a href="#contact">View project ↗</a></div></article></div></section>
-            <section id="blog"><div class="section-head reveal"><h2>From the<br>journal.</h2><p>Notes on creativity, process, and the things that keep me inspired.</p></div><div class="blog"><article class="post reveal"><time>06.14.24</time><h3>In defense of making things slowly</h3><p>Why a little more patience can make all the difference.</p><p class="more">The best work often arrives after the obvious answer has had time to get out of the way.</p></article><article class="post reveal"><time>05.02.24</time><h3>Finding the story in the messy middle</h3><p>Some thoughts on designing through uncertainty.</p><p class="more">Clarity is made through questions, sketches, and generous edits.</p></article><article class="post reveal"><time>03.18.24</time><h3>A field guide to better feedback</h3><p>How to turn opinions into useful creative direction.</p><p class="more">Good feedback describes the destination, not just the bumps in the road.</p></article></div></section>
+            <section class="hero">
+                <div class="reveal">
+                    <div class="eyebrow" data-en="Cybersecurity Student · Developer · Creative" data-ar="طالب أمن سيبراني · مطوّر · مبدع">Cybersecurity Student · Developer · Creative</div>
+                    <h1 data-en="Making ideas feel <em>alive.</em>" data-ar="أجعل الأفكار <em>تنبض بالحياة.</em>">Making ideas feel <em>alive.</em></h1>
+                    <p data-en="I’m Ammar, a cybersecurity student who enjoys programming, editing photos and videos, and creating modern websites." data-ar="أنا عمّار، طالب أمن سيبراني أستمتع بالبرمجة وتحرير الصور والفيديو وإنشاء المواقع الحديثة.">I’m Ammar, a cybersecurity student who enjoys programming, editing photos and videos, and creating modern websites.</p>
+                    <a class="button" href="#work" data-en="See my work ↓" data-ar="شاهد أعمالي ↓">See my work ↓</a>
+                    <a class="button alt" href="#contact" data-en="Let's talk" data-ar="لنتحدث">Let's talk</a>
+                </div>
+                <div class="portrait reveal">
+                    <div class="blob"></div>
+                    <img src="https://i.pinimg.com/736x/6e/84/ce/6e84cee2bb28aea72348e759b7d234a7.jpg" alt="Ammar Mansour portrait">
+                    <div class="sticker" data-en="AVAILABLE<br>FOR GOOD<br>PROJECTS ✦" data-ar="متاح<br>للمشاريع<br>الجيدة ✦">AVAILABLE<br>FOR GOOD<br>PROJECTS ✦</div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="section-head reveal">
+                    <h2 data-en="A little<br>about me." data-ar="نبذة<br>عني.">A little<br>about me.</h2>
+                    <p data-en="I’m building my skills across cybersecurity, programming, digital editing, and web development." data-ar="أطوّر مهاراتي في الأمن السيبراني والبرمجة والتحرير الرقمي وتطوير الويب.">I’m building my skills across cybersecurity, programming, digital editing, and web development.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-copy reveal">
+                        <span data-en="I’m a cybersecurity student with a passion for technology and creative digital work. I enjoy programming, editing photos and videos, and creating responsive websites that are useful, clear, and visually engaging." data-ar="أنا طالب أمن سيبراني لديّ شغف بالتقنية والعمل الرقمي الإبداعي. أستمتع بالبرمجة وتحرير الصور والفيديو وإنشاء مواقع متجاوبة تكون مفيدة وواضحة وجذابة بصرياً.">I’m a cybersecurity student with a passion for technology and creative digital work. I enjoy programming, editing photos and videos, and creating responsive websites that are useful, clear, and visually engaging.</span>
+                        <div class="facts">
+                            <div class="fact"><strong>01</strong><small data-en="cybersecurity student" data-ar="طالب أمن سيبراني">cybersecurity student</small></div>
+                            <div class="fact"><strong>04</strong><small data-en="creative skills" data-ar="مهارات إبداعية">creative skills</small></div>
+                            <div class="fact"><strong>∞</strong><small data-en="ideas to build" data-ar="أفكار لبنائها">ideas to build</small></div>
+                        </div>
+                    </div>
+                    <div class="gallery reveal">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80" alt="Creative studio">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Notebook and coffee">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Laptop workspace">
+                        <img src="https://mittrarabia.majarracdn.cloud/mit/2025/10/shutterstock_1122339353-Converted-1920x1126.jpeg" alt="Portrait outdoors">
+                    </div>
+                </div>
+            </section>
+
+            <section id="work">
+                <div class="section-head reveal">
+                    <h2 data-en="Selected<br>work." data-ar="أعمال<br>مختارة.">Selected<br>work.</h2>
+                    <p data-en="A few projects I’m proud to have shaped from first sketch to final pixel." data-ar="بعض المشاريع التي أفتخر بصياغتها من أول رسمة إلى آخر بكسل.">A few projects I’m proud to have shaped from first sketch to final pixel.</p>
+                </div>
+                <div class="filters reveal">
+                    <button class="filter active" data-filter="all" data-en="All work" data-ar="كل الأعمال">All work</button>
+                    <button class="filter" data-filter="branding" data-en="Branding" data-ar="هوية بصرية">Branding</button>
+                    <button class="filter" data-filter="digital" data-en="Digital" data-ar="رقمي">Digital</button>
+                    <button class="filter" data-filter="campaign" data-en="Campaign" data-ar="حملات">Campaign</button>
+                </div>
+                <div class="projects">
+                    <article class="card reveal" data-type="branding">
+                        <span class="status" data-en="In the making · Coming soon" data-ar="قيد التنفيذ · قريباً">In the making · Coming soon</span>
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=80" alt="Brand identity project">
+                        <div class="card-body">
+                            <span class="tag" data-en="Branding · 2024" data-ar="هوية بصرية · 2024">Branding · 2024</span>
+                            <h3 data-en="Ora skincare" data-ar="أورا للعناية بالبشرة">Ora skincare</h3>
+                            <p data-en="A warm, tactile identity for a new kind of everyday ritual." data-ar="هوية دافئة وملموسة لطقس يومي جديد.">A warm, tactile identity for a new kind of everyday ritual.</p>
+                            <a href="#contact" data-en="View project ↗" data-ar="عرض المشروع ↗">View project ↗</a>
+                        </div>
+                    </article>
+                    <article class="card reveal" data-type="digital">
+                        <span class="status" data-en="In the making · Coming soon" data-ar="قيد التنفيذ · قريباً">In the making · Coming soon</span>
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=700&q=80" alt="Website project">
+                        <div class="card-body">
+                            <span class="tag" data-en="Digital · 2023" data-ar="رقمي · 2023">Digital · 2023</span>
+                            <h3 data-en="Common ground" data-ar="أرضية مشتركة">Common ground</h3>
+                            <p data-en="Making local food discovery feel more human and more fun." data-ar="جعل اكتشاف الطعام المحلي أكثر إنسانية ومتعة.">Making local food discovery feel more human and more fun.</p>
+                            <a href="#contact" data-en="View project ↗" data-ar="عرض المشروع ↗">View project ↗</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="blog">
+                <div class="section-head reveal">
+                    <h2 data-en="From the<br>journal." data-ar="من<br>المدونة.">From the<br>journal.</h2>
+                    <p data-en="Notes on creativity, process, and the things that keep me inspired." data-ar="ملاحظات عن الإبداع والعملية والأشياء التي تُلهمني.">Notes on creativity, process, and the things that keep me inspired.</p>
+                </div>
+                <div class="blog">
+                    <article class="post reveal">
+                        <time>06.14.24</time>
+                        <h3 data-en="In defense of making things slowly" data-ar="دفاعاً عن الإنجاز ببطء">In defense of making things slowly</h3>
+                        <p data-en="Why a little more patience can make all the difference." data-ar="لماذا قد يُحدث القليل من الصبر فرقاً كبيراً.">Why a little more patience can make all the difference.</p>
+                        <p class="more" data-en="The best work often arrives after the obvious answer has had time to get out of the way." data-ar="أفضل الأعمال غالباً تأتي بعد أن يأخذ الجواب الواضح وقته ليبتعد عن الطريق.">The best work often arrives after the obvious answer has had time to get out of the way.</p>
+                    </article>
+                    <article class="post reveal">
+                        <time>05.02.24</time>
+                        <h3 data-en="Finding the story in the messy middle" data-ar="إيجاد القصة في المنتصف الفوضوي">Finding the story in the messy middle</h3>
+                        <p data-en="Some thoughts on designing through uncertainty." data-ar="أفكار حول التصميم في ظل عدم اليقين.">Some thoughts on designing through uncertainty.</p>
+                        <p class="more" data-en="Clarity is made through questions, sketches, and generous edits." data-ar="الوضوح يُصنع عبر الأسئلة والرسومات والتعديلات السخية.">Clarity is made through questions, sketches, and generous edits.</p>
+                    </article>
+                    <article class="post reveal">
+                        <time>03.18.24</time>
+                        <h3 data-en="A field guide to better feedback" data-ar="دليل عملي لتلقّي ملاحظات أفضل">A field guide to better feedback</h3>
+                        <p data-en="How to turn opinions into useful creative direction." data-ar="كيف تحوّل الآراء إلى توجيه إبداعي مفيد.">How to turn opinions into useful creative direction.</p>
+                        <p class="more" data-en="Good feedback describes the destination, not just the bumps in the road." data-ar="الملاحظات الجيدة تصف الوجهة، وليس فقط المطبات في الطريق.">Good feedback describes the destination, not just the bumps in the road.</p>
+                    </article>
+                </div>
+            </section>
+
             <section id="contact">
                 <div class="contact">
                     <div class="reveal">
-                        <h2>Have a good<br>feeling?</h2>
-                        <p>Tell me what you’re working on, what keeps you up at night, or just say hello.</p>
+                        <h2 data-en="Have a good<br>feeling?" data-ar="لديك فكرة<br>جيدة؟">Have a good<br>feeling?</h2>
+                        <p data-en="Tell me what you’re working on, what keeps you up at night, or just say hello." data-ar="أخبرني بما تعمل عليه، أو بما يبقيك مستيقظاً في الليل، أو قل مرحباً فقط.">Tell me what you’re working on, what keeps you up at night, or just say hello.</p>
                     </div>
                     <form id="contact-form" class="reveal" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="access_key" value="9e54a97c-2fb1-439b-b057-1e2a8978a6d9">
-                        <input name="name" required placeholder="Your name" aria-label="Your name">
-                        <input name="email" required type="email" placeholder="Your email" aria-label="Your email">
-                        <textarea name="message" required placeholder="Tell me a little about your project..." aria-label="Message"></textarea>
-                        
-                        <!-- Custom Image/File Upload Field -->
+                        <input name="name" required placeholder="Your name" aria-label="Your name" data-en-placeholder="Your name" data-ar-placeholder="اسمك">
+                        <input name="email" required type="email" placeholder="Your email" aria-label="Your email" data-en-placeholder="Your email" data-ar-placeholder="بريدك الإلكتروني">
+                        <textarea name="message" required placeholder="Tell me a little about your project..." aria-label="Message" data-en-placeholder="Tell me a little about your project..." data-ar-placeholder="أخبرني قليلاً عن مشروعك..."></textarea>
                         <div class="file-upload-wrapper">
                             <label for="attachment" class="file-upload-btn">
                                 <svg viewBox="0 0 24 24"><path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5a2.5 2.5 0 0 1 5 0v10.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V6H9v9.5a3 3 0 1 0 6 0V5a4 4 0 0 0-8 0v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z"/></svg>
-                                Attach image / file
+                                <span data-en="Attach image / file" data-ar="أرفق صورة / ملف">Attach image / file</span>
                             </label>
                             <input type="file" id="attachment" name="attachment" accept="image/*,.pdf">
-                            <span class="file-name-display" id="file-name">No file chosen</span>
+                            <span class="file-name-display" id="file-name" data-en="No file chosen" data-ar="لم يتم اختيار ملف">No file chosen</span>
                         </div>
-
-                        <div class="autosave-status" aria-live="polite">Autosave disabled</div>
-                        <button class="button" type="submit">Send it my way →</button>
+                        <div class="autosave-status" aria-live="polite"></div>
+                        <button class="button" type="submit" data-en="Send it my way →" data-ar="أرسله إليّ →">Send it my way →</button>
                     </form>
                 </div>
             </section>
-        </main><footer><span>© 2026 Ammar Mansour❗</span></footer>
+        </main>
+        <footer>
+            <span data-en="© 2026 Ammar Mansour" data-ar="© 2026 عمّار منصور">© 2026 Ammar Mansour</span>
+        </footer>
     </div>
+
     <script>
+        const LANG_KEY = 'ammar-preferred-lang';
+        const langBtn = document.getElementById('lang-toggle');
+        let currentLang = 'en';
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+                const value = el.getAttribute('data-' + lang);
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    if (el.hasAttribute('data-' + lang + '-placeholder')) {
+                        el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
+                    }
+                } else {
+                    el.innerHTML = value;
+                }
+            });
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            langBtn.textContent = (lang === 'ar') ? 'English' : 'العربية';
+            localStorage.setItem(LANG_KEY, lang);
+        }
+
+        langBtn.addEventListener('click', () => {
+            applyLanguage(currentLang === 'en' ? 'ar' : 'en');
+        });
+
+        const savedLang = localStorage.getItem(LANG_KEY);
+        if (savedLang === 'ar') {
+            applyLanguage('ar');
+        }
+
         const STORAGE_KEY='ammar-portfolio-autosave';
         const saveStatus=document.querySelector('.autosave-status');
-        const showSaveState=(message)=>{if(!saveStatus)return;saveStatus.textContent=message;saveStatus.classList.add('saved');setTimeout(()=>{saveStatus.textContent='';saveStatus.classList.add('saved');},120)};
         const getSavedState=()=>{try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}catch{return {}}};
-        const saveState=()=>{const form=document.querySelector('#contact-form');const state={form:{},activeFilter:document.querySelector('.filter.active')?.dataset.filter||'all',openPosts:[...document.querySelectorAll('.post.open')].map(post=>post.dataset.postId||'')};form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden'&&field.type!=='file')state.form[field.name||field.getAttribute('aria-label')||field.placeholder]=field.value});localStorage.setItem(STORAGE_KEY, JSON.stringify(state));showSaveState('');};
-        const restoreState=()=>{const state=getSavedState();const form=document.querySelector('#contact-form');if(form){form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden'&&field.type!=='file'){const key=field.name||field.getAttribute('aria-label')||field.placeholder;const value=state.form&&state.form[key];if(value!==undefined) field.value=value;}});}if(state.activeFilter){document.querySelectorAll('.filter').forEach(button=>{const isActive=button.dataset.filter===state.activeFilter;button.classList.toggle('active',isActive);});document.querySelectorAll('.card').forEach(card=>card.classList.toggle('hide',state.activeFilter!=='all'&&card.dataset.type!==state.activeFilter));}if(Array.isArray(state.openPosts)){document.querySelectorAll('.post').forEach((post,index)=>{const shouldOpen=state.openPosts[index]!==undefined&&state.openPosts[index]!=='';post.classList.toggle('open',shouldOpen);});}
-        if(saveStatus){saveStatus.textContent='';saveStatus.classList.add('saved');setTimeout(()=>{saveStatus.textContent='  ';saveStatus.classList.add('saved');},1200);}};
+        const saveState=()=>{const form=document.querySelector('#contact-form');const state={form:{},activeFilter:document.querySelector('.filter.active')?.dataset.filter||'all',openPosts:[...document.querySelectorAll('.post.open')].map(post=>post.dataset.postId||'')};form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden'&&field.type!=='file')state.form[field.name||field.getAttribute('aria-label')||field.placeholder]=field.value});localStorage.setItem(STORAGE_KEY, JSON.stringify(state));};
+        const restoreState=()=>{const state=getSavedState();const form=document.querySelector('#contact-form');if(form){form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden'&&field.type!=='file'){const key=field.name||field.getAttribute('aria-label')||field.placeholder;const value=state.form&&state.form[key];if(value!==undefined) field.value=value;}});}if(state.activeFilter){document.querySelectorAll('.filter').forEach(button=>{const isActive=button.dataset.filter===state.activeFilter;button.classList.toggle('active',isActive);});document.querySelectorAll('.card').forEach(card=>card.classList.toggle('hide',state.activeFilter!=='all'&&card.dataset.type!==state.activeFilter));}if(Array.isArray(state.openPosts)){document.querySelectorAll('.post').forEach((post,index)=>{const shouldOpen=state.openPosts[index]!==undefined&&state.openPosts[index]!=='';post.classList.toggle('open',shouldOpen);});}};
+
         const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('show')}),{threshold:.12});
         document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
         const menu=document.querySelector('.menu'),links=document.querySelector('.links');
         menu.onclick=()=>{links.classList.toggle('open');menu.setAttribute('aria-expanded',links.classList.contains('open'))};
         links.querySelectorAll('a').forEach(link=>link.onclick=()=>links.classList.remove('open'));
+
         document.querySelectorAll('.filter').forEach(button=>button.onclick=()=>{document.querySelectorAll('.filter').forEach(item=>item.classList.remove('active'));button.classList.add('active');document.querySelectorAll('.card').forEach(card=>card.classList.toggle('hide',button.dataset.filter!=='all'&&card.dataset.type!==button.dataset.filter));saveState();});
+
         document.querySelectorAll('.post').forEach(post=>{post.dataset.postId=`post-${[...document.querySelectorAll('.post')].indexOf(post)}`;post.onclick=()=>{post.classList.toggle('open');saveState();}});
+
         document.querySelector('#contact-form').querySelectorAll('input, textarea').forEach(field=>field.addEventListener('input',saveState));
-        
-        // Handle File Selection Display
+
         const fileInput = document.getElementById('attachment');
         const fileNameDisplay = document.getElementById('file-name');
         fileInput.addEventListener('change', () => {
-            fileNameDisplay.textContent = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file chosen';
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = fileInput.files[0].name;
+                fileNameDisplay.removeAttribute('data-en');
+                fileNameDisplay.removeAttribute('data-ar');
+            } else {
+                fileNameDisplay.textContent = currentLang === 'ar' ? 'لم يتم اختيار ملف' : 'No file chosen';
+                fileNameDisplay.setAttribute('data-en', 'No file chosen');
+                fileNameDisplay.setAttribute('data-ar', 'لم يتم اختيار ملف');
+            }
         });
 
         restoreState();
+
         const contactForm = document.querySelector('#contact-form');
         contactForm.onsubmit = async (event) => {
             event.preventDefault();
             const button = contactForm.querySelector('button');
-            button.textContent = 'Sending...';
+            const originalText = button.innerHTML;
+            button.textContent = currentLang === 'ar' ? 'جارٍ الإرسال...' : 'Sending...';
             button.disabled = true;
             const formData = new FormData(contactForm);
             try {
@@ -108,17 +257,22 @@
                     headers: { 'Accept': 'application/json' }
                 });
                 if (response.ok) {
-                    button.textContent = 'Message sent ✓';
+                    button.textContent = currentLang === 'ar' ? 'تم الإرسال ✓' : 'Message sent ✓';
                     button.style.opacity = '.65';
                     contactForm.reset();
-                    fileNameDisplay.textContent = 'No file chosen';
+                    fileNameDisplay.textContent = currentLang === 'ar' ? 'لم يتم اختيار ملف' : 'No file chosen';
                     localStorage.removeItem(STORAGE_KEY);
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.style.opacity = '1';
+                        button.disabled = false;
+                    }, 3000);
                 } else {
-                    button.textContent = 'Error! Try again';
+                    button.textContent = currentLang === 'ar' ? 'خطأ! حاول مجدداً' : 'Error! Try again';
                     button.disabled = false;
                 }
             } catch (error) {
-                button.textContent = 'Error! Try again';
+                button.textContent = currentLang === 'ar' ? 'خطأ! حاول مجدداً' : 'Error! Try again';
                 button.disabled = false;
             }
         };
