@@ -19,6 +19,15 @@
         .filters{display:flex;gap:8px;margin:-17px 0 28px}.filter{border:1px solid var(--line);border-radius:30px;background:transparent;color:var(--muted);padding:9px 15px;font:500 .8rem 'DM Sans';cursor:pointer;transition:.25s}.filter:hover,.filter.active{background:var(--ink);border-color:var(--ink);color:#fff}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border-radius:16px;overflow:hidden;transition:.35s;position:relative}.card:hover{transform:translateY(-9px);box-shadow:0 18px 35px #17212b16}.card.hide{display:none}.card img{width:100%;height:205px;object-fit:cover}.status{position:absolute;top:16px;right:-34px;z-index:1;background:var(--lime);color:var(--ink);padding:8px 38px;font:700 .65rem 'Space Grotesk';letter-spacing:1px;text-transform:uppercase;transform:rotate(8deg);box-shadow:4px 5px 0 #17212b18}.card-body{padding:23px}.tag{color:var(--coral);font-size:.72rem;font-weight:bold;text-transform:uppercase;letter-spacing:1px}.card h3{font-size:1.35rem;margin:10px 0}.card p{color:var(--muted);line-height:1.55;font-size:.92rem}.card a{display:inline-block;margin-top:18px;font-weight:bold;border-bottom:2px solid var(--lime)}
         .blog{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.post{padding:25px 0;border-top:3px solid var(--ink);cursor:pointer}.post time{color:var(--coral);font-size:.8rem}.post h3{font-size:1.45rem;line-height:1.2;margin:13px 0}.post p{color:var(--muted);line-height:1.6}.post .more{max-height:0;overflow:hidden;opacity:0;transition:.35s}.post.open .more{max-height:80px;opacity:1;margin-top:14px}.post.open{border-color:var(--coral)}
         .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}.contact h2{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;letter-spacing:-3px}.contact p{color:var(--muted);line-height:1.6;margin-top:20px}form{display:grid;gap:16px}.autosave-status{font-size:.78rem;color:var(--muted);min-height:18px;margin-top:-2px}.autosave-status.saved{color:#1d7a52}input,textarea{font:inherit;border:0;border-bottom:1px solid #aeb4b0;background:transparent;padding:15px 2px;outline:0;color:var(--ink)}input:focus,textarea:focus{border-color:var(--coral)}textarea{min-height:110px;resize:vertical}form button{border:0;cursor:pointer;width:max-content;font:700 1rem 'DM Sans'}footer{padding:25px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+
+        /* Custom File Upload Styling */
+        .file-upload-wrapper { display: flex; align-items: center; gap: 12px; margin-top: 4px; }
+        .file-upload-btn { display: inline-flex; align-items: center; gap: 8px; border: 1.5px dashed var(--ink); padding: 10px 18px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; cursor: pointer; color: var(--ink); background: transparent; transition: 0.25s; }
+        .file-upload-btn:hover { background: var(--lime); border-style: solid; transform: translateY(-2px); }
+        .file-upload-btn svg { width: 16px; height: 16px; fill: currentColor; }
+        .file-name-display { font-size: 0.8rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+        input[type="file"] { display: none; }
+
         @keyframes float{50%{transform:translateY(-14px)}}@keyframes pulse{50%{box-shadow:0 0 0 10px #ff785f18}}.reveal{opacity:0;transform:translateY(22px);transition:.8s}.reveal.show{opacity:1;transform:none}.sticker{animation:pulse 2.8s ease-in-out infinite}.button{position:relative;overflow:hidden}.button:after{content:'';position:absolute;inset:0;background:#fff2;transform:translateX(-110%) skewX(-18deg);transition:.5s}.button:hover:after{transform:translateX(110%) skewX(-18deg)}
         @media(max-width:760px){.links{display:flex;position:absolute;top:82px;left:0;right:0;padding:20px 28px;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;gap:18px;transform:translateY(-16px);opacity:0;pointer-events:none;transition:.3s}.links.open{transform:none;opacity:1;pointer-events:auto}.menu{display:block}.hero{grid-template-columns:1fr;min-height:auto;padding:85px 0}.hero h1{letter-spacing:-3px}.portrait{width:75%;margin-top:25px}.about-grid,.contact{grid-template-columns:1fr;gap:40px}.projects,.blog{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:15px}.contact{gap:35px}.filters{overflow:auto;padding-bottom:3px;margin-top:-3px}}
     </style>
@@ -31,7 +40,33 @@
             <section id="about"><div class="section-head reveal"><h2>A little<br>about me.</h2><p>I’m building my skills across cybersecurity, programming, digital editing, and web development.</p></div><div class="about-grid"><div class="about-copy reveal">I’m a cybersecurity student with a passion for technology and creative digital work. I enjoy programming, editing photos and videos, and creating responsive websites that are useful, clear, and visually engaging.<div class="facts"><div class="fact"><strong>01</strong><small>cybersecurity student</small></div><div class="fact"><strong>04</strong><small>creative skills</small></div><div class="fact"><strong>∞</strong><small>ideas to build</small></div></div></div><div class="gallery reveal"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80" alt="Creative studio"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Notebook and coffee"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Laptop workspace"><img src="https://mittrarabia.majarracdn.cloud/mit/2025/10/shutterstock_1122339353-Converted-1920x1126.jpeg" alt="Portrait outdoors"></div></div></section>
             <section id="work"><div class="section-head reveal"><h2>Selected<br>work.</h2><p>A few projects I’m proud to have shaped from first sketch to final pixel.</p></div><div class="filters reveal"><button class="filter active" data-filter="all">All work</button><button class="filter" data-filter="branding">Branding</button><button class="filter" data-filter="digital">Digital</button><button class="filter" data-filter="campaign">Campaign</button></div><div class="projects"><article class="card reveal" data-type="branding"><span class="status">In the making · Coming soon</span><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=80" alt="Brand identity project"><div class="card-body"><span class="tag">Branding · 2024</span><h3>Ora skincare</h3><p>A warm, tactile identity for a new kind of everyday ritual.</p><a href="#contact">View project ↗</a></div></article><article class="card reveal" data-type="digital"><span class="status">In the making · Coming soon</span><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=700&q=80" alt="Website project"><div class="card-body"><span class="tag">Digital · 2023</span><h3>Common ground</h3><p>Making local food discovery feel more human and more fun.</p><a href="#contact">View project ↗</a></div></article></div></section>
             <section id="blog"><div class="section-head reveal"><h2>From the<br>journal.</h2><p>Notes on creativity, process, and the things that keep me inspired.</p></div><div class="blog"><article class="post reveal"><time>06.14.24</time><h3>In defense of making things slowly</h3><p>Why a little more patience can make all the difference.</p><p class="more">The best work often arrives after the obvious answer has had time to get out of the way.</p></article><article class="post reveal"><time>05.02.24</time><h3>Finding the story in the messy middle</h3><p>Some thoughts on designing through uncertainty.</p><p class="more">Clarity is made through questions, sketches, and generous edits.</p></article><article class="post reveal"><time>03.18.24</time><h3>A field guide to better feedback</h3><p>How to turn opinions into useful creative direction.</p><p class="more">Good feedback describes the destination, not just the bumps in the road.</p></article></div></section>
-            <section id="contact"><div class="contact"><div class="reveal"><h2>Have a good<br>feeling?</h2><p>Tell me what you’re working on, what keeps you up at night, or just say hello.</p></div><form id="contact-form" class="reveal" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="9e54a97c-2fb1-439b-b057-1e2a8978a6d9"><input name="name" required placeholder="Your name" aria-label="Your name"><input name="email" required type="email" placeholder="Your email" aria-label="Your email"><textarea name="message" required placeholder="Tell me a little about your project..." aria-label="Message"></textarea><div class="autosave-status" aria-live="polite">Autosave disabled</div><button class="button" type="submit">Send it my way →</button></form></div></section>
+            <section id="contact">
+                <div class="contact">
+                    <div class="reveal">
+                        <h2>Have a good<br>feeling?</h2>
+                        <p>Tell me what you’re working on, what keeps you up at night, or just say hello.</p>
+                    </div>
+                    <form id="contact-form" class="reveal" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="access_key" value="9e54a97c-2fb1-439b-b057-1e2a8978a6d9">
+                        <input name="name" required placeholder="Your name" aria-label="Your name">
+                        <input name="email" required type="email" placeholder="Your email" aria-label="Your email">
+                        <textarea name="message" required placeholder="Tell me a little about your project..." aria-label="Message"></textarea>
+                        
+                        <!-- Custom Image/File Upload Field -->
+                        <div class="file-upload-wrapper">
+                            <label for="attachment" class="file-upload-btn">
+                                <svg viewBox="0 0 24 24"><path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5a2.5 2.5 0 0 1 5 0v10.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V6H9v9.5a3 3 0 1 0 6 0V5a4 4 0 0 0-8 0v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z"/></svg>
+                                Attach image / file
+                            </label>
+                            <input type="file" id="attachment" name="attachment" accept="image/*,.pdf">
+                            <span class="file-name-display" id="file-name">No file chosen</span>
+                        </div>
+
+                        <div class="autosave-status" aria-live="polite">Autosave disabled</div>
+                        <button class="button" type="submit">Send it my way →</button>
+                    </form>
+                </div>
+            </section>
         </main><footer><span>© 2026 Ammar Mansour❗</span></footer>
     </div>
     <script>
@@ -39,8 +74,8 @@
         const saveStatus=document.querySelector('.autosave-status');
         const showSaveState=(message)=>{if(!saveStatus)return;saveStatus.textContent=message;saveStatus.classList.add('saved');setTimeout(()=>{saveStatus.textContent='';saveStatus.classList.add('saved');},120)};
         const getSavedState=()=>{try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}catch{return {}}};
-        const saveState=()=>{const form=document.querySelector('#contact-form');const state={form:{},activeFilter:document.querySelector('.filter.active')?.dataset.filter||'all',openPosts:[...document.querySelectorAll('.post.open')].map(post=>post.dataset.postId||'')};form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden')state.form[field.name||field.getAttribute('aria-label')||field.placeholder]=field.value});localStorage.setItem(STORAGE_KEY, JSON.stringify(state));showSaveState('');};
-        const restoreState=()=>{const state=getSavedState();const form=document.querySelector('#contact-form');if(form){form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden'){const key=field.name||field.getAttribute('aria-label')||field.placeholder;const value=state.form&&state.form[key];if(value!==undefined) field.value=value;}});}if(state.activeFilter){document.querySelectorAll('.filter').forEach(button=>{const isActive=button.dataset.filter===state.activeFilter;button.classList.toggle('active',isActive);});document.querySelectorAll('.card').forEach(card=>card.classList.toggle('hide',state.activeFilter!=='all'&&card.dataset.type!==state.activeFilter));}if(Array.isArray(state.openPosts)){document.querySelectorAll('.post').forEach((post,index)=>{const shouldOpen=state.openPosts[index]!==undefined&&state.openPosts[index]!=='';post.classList.toggle('open',shouldOpen);});}
+        const saveState=()=>{const form=document.querySelector('#contact-form');const state={form:{},activeFilter:document.querySelector('.filter.active')?.dataset.filter||'all',openPosts:[...document.querySelectorAll('.post.open')].map(post=>post.dataset.postId||'')};form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden'&&field.type!=='file')state.form[field.name||field.getAttribute('aria-label')||field.placeholder]=field.value});localStorage.setItem(STORAGE_KEY, JSON.stringify(state));showSaveState('');};
+        const restoreState=()=>{const state=getSavedState();const form=document.querySelector('#contact-form');if(form){form.querySelectorAll('input, textarea').forEach(field=>{if(field.type!=='hidden'&&field.type!=='file'){const key=field.name||field.getAttribute('aria-label')||field.placeholder;const value=state.form&&state.form[key];if(value!==undefined) field.value=value;}});}if(state.activeFilter){document.querySelectorAll('.filter').forEach(button=>{const isActive=button.dataset.filter===state.activeFilter;button.classList.toggle('active',isActive);});document.querySelectorAll('.card').forEach(card=>card.classList.toggle('hide',state.activeFilter!=='all'&&card.dataset.type!==state.activeFilter));}if(Array.isArray(state.openPosts)){document.querySelectorAll('.post').forEach((post,index)=>{const shouldOpen=state.openPosts[index]!==undefined&&state.openPosts[index]!=='';post.classList.toggle('open',shouldOpen);});}
         if(saveStatus){saveStatus.textContent='';saveStatus.classList.add('saved');setTimeout(()=>{saveStatus.textContent='  ';saveStatus.classList.add('saved');},1200);}};
         const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('show')}),{threshold:.12});
         document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
@@ -50,6 +85,14 @@
         document.querySelectorAll('.filter').forEach(button=>button.onclick=()=>{document.querySelectorAll('.filter').forEach(item=>item.classList.remove('active'));button.classList.add('active');document.querySelectorAll('.card').forEach(card=>card.classList.toggle('hide',button.dataset.filter!=='all'&&card.dataset.type!==button.dataset.filter));saveState();});
         document.querySelectorAll('.post').forEach(post=>{post.dataset.postId=`post-${[...document.querySelectorAll('.post')].indexOf(post)}`;post.onclick=()=>{post.classList.toggle('open');saveState();}});
         document.querySelector('#contact-form').querySelectorAll('input, textarea').forEach(field=>field.addEventListener('input',saveState));
+        
+        // Handle File Selection Display
+        const fileInput = document.getElementById('attachment');
+        const fileNameDisplay = document.getElementById('file-name');
+        fileInput.addEventListener('change', () => {
+            fileNameDisplay.textContent = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file chosen';
+        });
+
         restoreState();
         const contactForm = document.querySelector('#contact-form');
         contactForm.onsubmit = async (event) => {
@@ -68,6 +111,7 @@
                     button.textContent = 'Message sent ✓';
                     button.style.opacity = '.65';
                     contactForm.reset();
+                    fileNameDisplay.textContent = 'No file chosen';
                     localStorage.removeItem(STORAGE_KEY);
                 } else {
                     button.textContent = 'Error! Try again';
